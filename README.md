@@ -30,6 +30,7 @@ This repository includes:
 **1. Behavioural Data:**
 - Stored in .xlsx format in scripts_MAT/behavioural_data/, which are required by preprocessing_pipeline.m; and in scripts_Py/data, which are required by correlation_data_export.m and main.py)
 - Stored in .sav format in scripts_R/scripts/datasets/, which are required for statistical analysis of behavioural data in R.
+
 **2. EEG Example Data:**
 - Located in scripts_MAT/example_data/
 - Use these datasets to test and familiarise yourself with the EEG preprocessing and analysis pipelines
@@ -37,22 +38,29 @@ This repository includes:
 
 ## How to Use
 **1. Clone or download** this repository.
+
 **2. EEG preprocessing:**
 - Use preprocessing_pipeline.m in scripts_MAT/ to convert raw EEG data into epochs for each WM phase.
 - Requires EEGLAB.
 - This pipeline is participant-, session-, and test-specific, and includes visual inspection and manual (or automated) rejection of bad channels, segments, and ICA components.
+
 **3. Spectral analysis:**
 - Use spectral_analysis_pipeline.m in scripts_MAT/ to compute and plot the power spectrum.
 - Requires FieldTrip.
 - Manual inspection for artifact rejection is included.
+
 **4. Statistical analysis:**
 - Run main.m in scripts_MAT/ to conduct cluster-based permutation tests, calculate effect sizes (with confidence bounds), and visualise significant clusters.
+
 **5. Behavioural analysis:**
 - Run Analysis_tests.R in scripts_R/scripts/ to visualise Letter Span and Corsi Test results, run LMEMs for transfer and long-term effects and explore individual differences.
+
 **6. Training data analysis:**
 - Run Analysis_training.R in scripts_R/scripts/ to visualise training task performance, run LMEMs for training effects and explore individual differences.
+
 **7. Predictive modelling:**
 - Run Analysis_training_tests.R in scripts_R/scripts/ to conduct linear regressions linking training performance to WM test improvements.
+
 **8. Neural-behavioural correlations:**
 - Run main.py in scripts_Py/ to compute cluster-based Spearman correlations between EEG and behavioural outcomes
 
@@ -63,10 +71,4 @@ Distributed under the MIT Licence.
 ## Author:
 Esteban León-Correa
 Cognitive Psychologist
-Edge Hill University"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
-"# Old_Spectral_Power_tDCS" 
+Edge Hill University 
