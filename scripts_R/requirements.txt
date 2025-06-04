@@ -1,0 +1,6 @@
+## Requirements
+
+Install necessary packages in R:
+
+```r
+install.packages(c("haven", "lme4", "lmerTest", "MuMIn", "ggplot2", "plyr", "dplyr", "tidyr", "emmeans", "sjstats", "here", "stringr"))
