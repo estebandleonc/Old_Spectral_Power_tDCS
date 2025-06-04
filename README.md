@@ -70,5 +70,7 @@ Distributed under the MIT Licence.
 
 ## Author:
 Esteban León-Correa
+
 Cognitive Psychologist
+
 Edge Hill University 
