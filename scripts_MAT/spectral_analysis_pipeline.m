@@ -19,7 +19,7 @@
 clear; clc;
 
 % === Paths ===
-main_root = 'C:\Users\Esteban\Desktop\Github\tDCS\scripts_MAT'; % <-- Adjust path
+main_root = '\scripts_MAT'; % <-- Adjust path
 data_path = fullfile(main_root, 'preprocessed_data');
 output_path = fullfile(main_root, 'processed_data');
 graphs_path = fullfile(output_path, 'graphs');
