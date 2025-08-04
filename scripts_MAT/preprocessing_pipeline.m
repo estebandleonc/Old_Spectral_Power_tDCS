@@ -95,7 +95,7 @@ vis_artifacts(EEG_bad_chan, EEG);
 bad_channels = {}; % e.g., {'Fp1','F8'}
 EEG.urchanlocs = EEG.chanlocs;
 EEG = pop_select(EEG, 'nochannel', bad_channels);
-pop_saveset(EEG, 'filename', [base_filename ' - no_bad_channels.set'], 'filepath', output_dir;
+pop_saveset(EEG, 'filename', [base_filename ' - no_bad_channels.set'], 'filepath', output_dir);
 
 %% ICA PROCESSING
 % Downsample for ICA
