@@ -52,8 +52,9 @@ pop_saveset(EEG, 'filename', [base_filename ' - raw.set'], 'filepath', output_di
 %% PREPARE DATA: CUT, RESAMPLE, CHANNEL EDIT
 EEG = pop_select(EEG, 'time', [13 1741]); % <-- Adjust as needed
 EEG = pop_resample(EEG, 512);
+lookup_path = fullfile(eeglab_path, 'plugins', 'dipfit5.3', 'standard_BEM', 'elec', 'standard_1005.elc');
 EEG = pop_chanedit(EEG, 'append',63,'changefield',{64,'labels','Cz'}, ...
-    'lookup','C:\\Users\\Esteban\\Desktop\\Esteban Guapo\\eeglab2022.1\\plugins\\dipfit5.3\\standard_BEM\\elec\\standard_1005.elc', ...
+    'lookup',lookup_path, ...
     'setref',{'1:63','Cz'});
 pop_saveset(EEG, 'filename', [base_filename ' - Preparation.set'], 'filepath', output_dir);
 
@@ -124,7 +125,7 @@ EEG.icawinv = EEG_ica.icawinv;
 
 % Label & reject components
 EEG = pop_iclabel(EEG, 'default');
-EEG = pop_icflag(EEG, [NaN NaN;0.9 1;0.9 1;NaN NaN;NaN NaN;NaN NaN;NaN NaN]);
+EEG = pop_icflag(EEG, [NaN NaN;0.8 1;0.8 1;NaN NaN;NaN NaN;NaN NaN;NaN NaN]);
 pop_selectcomps(EEG, 1:EEG.nbchan);
 
 pop_saveset(EEG, 'filename', [base_filename ' - preICA.set'], 'filepath', output_dir);
