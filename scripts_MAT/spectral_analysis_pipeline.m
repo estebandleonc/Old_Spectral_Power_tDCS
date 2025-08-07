@@ -25,6 +25,7 @@ output_path = fullfile(main_root, 'processed_data');
 graphs_path = fullfile(output_path, 'graphs');
 excel_path = fullfile(main_root, 'behavioural_data');
 fieldtrip_path = '\fieldtrip-20230613'; % <-- Adjust path
+layout = 'EEG1010.lay'; % <-- Adjust according to data
 
 % === Participant ===
 subject_id = 'C18'; % adjust according to participant code
@@ -87,7 +88,7 @@ for i = 1:length(task_phases)
     
         % Look for noisy trials
         cfg = [];
-        cfg.layout = 'EEG1010.lay';
+        cfg.layout = layout;
         cfg.method = 'summary';
         clean_data_struct.(fieldname) = ft_rejectvisual(cfg, segmented_data_struct.(fieldname));
 
@@ -109,7 +110,7 @@ for i = 1:length(task_phases)
     
         % Plot topographical maps
         cfg = [];
-        cfg.layout      = 'EEG1010.lay';
+        cfg.layout      = layout;
         cfg.channel     = 'all'; % change channels to display
         cfg.trials      = 'all'; % change trials to display
         cfg.parameter   = 'powspctrm'; % we show the power spectrum
