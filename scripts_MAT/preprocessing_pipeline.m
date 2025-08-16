@@ -20,7 +20,7 @@ clear; clc;
 
 % === Paths ===
 main_root = '\scripts_MAT'; % <-- Adjust path
-data_path = fullfile(main_root, 'example_data');
+data_path = fullfile(main_root, 'data'); <-- Adjust path
 output_path = fullfile(main_root, 'preprocessed_data');
 eeglab_path = '\eeglab2022.1'; % <-- Adjust path
 
